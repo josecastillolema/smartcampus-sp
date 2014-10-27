@@ -19,9 +19,9 @@ In the first iteration of the prototype, the system will only manage one magnitu
 
 ## Linux and NGSI Client
 
-All the sensor reading is done in a Python script that reads the sensor data from the Arduino?/ and sends it to the Context Broker using the [NGSI Protocol](http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/OMA_NGSI_10). The Python-to-Arduino connection is created using [Nanpy](https://github.com/nanpy). 
+All the sensor reading is done in a Python script that reads the sensor data from the Arduino?/ and sends it to the Context Broker using the [NGSI Protocol](http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/OMA_NGSI_10). The Python-to-Arduino connection is created using [Nanpy](https://github.com/nanpy).
 
-#### Developing the python NGSI Client
+#### Developing the NGSI Client
 
 The Context Broker, where the measures will be aggregated and distributed, listens for requests following the [NGSI protocol](http://technical.openmobilealliance.org/Technical/release_program/NGSI_v1_0.aspx). In order to communicate with this component, a two NGSI clients were developed (python and java). The NGSI protocol defines several resources and operations, but the client only use a very restricted set:
 

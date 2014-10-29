@@ -59,3 +59,7 @@ Two widgets were deployed:
 ## Connection to Cosmos (HDFS and Hive)
 
 In order to consume the historical data from the widgets, it has to be first stored somewhere. FI-Ware sensor data is stored in the HDFS system of its Big Data GE: [Cosmos](http://catalogue.fi-ware.eu/enablers/bigdata-analysis-cosmos). The data is stored in Cosmos through the use of a script in the Context Broker machine, that is subscribed to the measure update.
+
+## Connection to CKAN
+
+OpenData ...

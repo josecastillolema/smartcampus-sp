@@ -4,7 +4,7 @@ Smart Campus SP
 # Overview
 SmartCampus is a [FI-Ware](http://edu.fi-ware.eu/course/index.php) software prototype to measure the contamination levels in the USP (Universidade de São Paulo) Campus with a group of sensors controlled with Arduino(?)/Galileo(?). Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed, bottom-up.
 
-![FI-Beer overview](img/Overview.png)
+![FI-Beer overview](img/overview.png)
 
 SmartCampus makes use of several FI-Ware building blocks, all of them deployed in the FI-Lab testbed:
 * [Context Broker](http://catalogue.fi-ware.eu/enablers/publishsubscribe-context-broker-orion-context-broker): a data concentrator for all the measures, manages subscriptions and data access. Needs some scripting in order to integrate it with Cosmos (NGSI2Cosmos script that can be found on the [FI-Ware Live Demo App](https://github.com/telefonicaid/fiware-livedemoapp) ).  
@@ -47,9 +47,14 @@ For the prototype, we used a dedicated cloud instance in [FI-Lab](http://lab.fi-
 ## Wirecloud Management Widget
 The Front End of the system was designed as a series of widgets deployed in FI-Ware's Mashup Platform: [Wirecloud](http://conwet.fi.upm.es/wirecloud/). The widgets were deployed in the FI-Lab's marketplace and composed in a new workspace.
 
-Two widgets were designed:
-* Temperature control widget: that consumes data from the Context Broker, showing a map of the campus with realtime information on the temperature, signaling what parts are too cool or too warm.
-* Historical data widget: depicting the evolution of the temperature over the last minutes.
+Two widgets were deployed:
+* NGSI Updater
+* Map viewer: that consumes data from the Context Broker, showing a map of the campus with realtime information on the temperature, signaling what parts are too cool or too warm.
+* Linear graph: Works as a historical data widget, depicting the evolution of the temperature over the last minutes.
+
+![WireCloud overview](img/wirecloud1.png)
+
+![Wiring overview](img/wirecloud2.png)
 
 ## Connection to Cosmos (HDFS and Hive)
 

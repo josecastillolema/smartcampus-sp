@@ -2,7 +2,7 @@ Smart Campus SP
 ===============
 
 # Overview
-SmartCampus is a [FI-Ware](http://edu.fi-ware.eu/course/index.php) software prototype to measure the contamination levels in the USP (Universidade de São Paulo) Campus with a group of sensors controlled with Arduino(?)/Galileo(?). Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed, bottom-up.
+SmartCampus is a [FI-Ware](http://edu.fi-ware.eu/course/index.php) software prototype to measure the contamination levels in the USP (Universidade de São Paulo) Campus with a group of Arduino and Galileo sensors. It can be accessed at http://130.206.126.46/admin/smartcampus-usp. Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed.
 
 ![FI-Beer overview](img/overview.png)
 
@@ -15,28 +15,28 @@ SmartCampus makes use of several FI-Ware building blocks, all of them deployed i
 
 ## Polution sensors instrumentation and hardware connection
 
-In the first iteration of the prototype, the system will only manage one magnitude of the polution metrics: the temperature. ..................
+In the first iteration of the prototype, the system will only manage one magnitude of the polution metrics: temperature, pressure, noise and air particles.
 
 ## Linux and NGSI Client
 
-All the sensor reading is done in a Python script that reads the sensor data from the Arduino?/ and sends it to the Context Broker using the [NGSI Protocol](http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/OMA_NGSI_10). The Python-to-Arduino connection is created using [Nanpy](https://github.com/nanpy).
+All the sensor reading is done in a Python script that reads the sensor data from the Arduino and Galileo sensors and sends it to the Context Broker using the [NGSI Protocol](http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/OMA_NGSI_10).
 
 #### Developing the NGSI Client
 
-The Context Broker, where the measures will be aggregated and distributed, listens for requests following the [NGSI protocol](http://technical.openmobilealliance.org/Technical/release_program/NGSI_v1_0.aspx). In order to communicate with this component, a two NGSI clients were developed (python and java). The NGSI protocol defines several resources and operations, but the client only use a very restricted set:
+The Context Broker, where the measures will be aggregated and distributed, listens for requests following the [NGSI protocol](http://technical.openmobilealliance.org/Technical/release_program/NGSI_v1_0.aspx). In order to communicate with this component, two NGSI clients were developed (python and java). The NGSI protocol defines several resources and operations, but the client only use a very restricted set:
 
-* Appending a new measure for a context. 
-* Getting measures for a particular context (not currently in use in the prototype but expected).
+* Appending a new measure for a context
+* Getting measures for a particular context
 
-The NGSI protocol is a REST protocol that accepts both XML and JSON payloads. In this case, all the communications were stablished using the `requests` HTTP library with JSON payloads (using the default `json` python library).
+The NGSI protocol is a REST protocol that accepts both XML and JSON payloads. JSON was prefered for this project.
 
 ##### Python version
 
-Intented to be used with Arduino(?)/Galileo(?).
+Intented to be used with Arduino and Galileo sensors. All the communications were stablished using the `requests` HTTP library with JSON payloads (the default `json` python library).
 
 ##### Java version
 
-Intended to be used with Android OS.
+Intended to be used with Android OS. For the Java version, the [Jersey API](https://jersey.java.net/) was used.
 
 ## The Context Broker
 

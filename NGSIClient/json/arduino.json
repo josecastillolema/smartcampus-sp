@@ -1,0 +1,27 @@
+{
+    "contextElements": [
+        {
+            "type": “arduino”,
+            "isPattern": "false",
+            "id": “1”,
+            "attributes": [
+            {
+                "name": "temperature",
+                "type": "centigrade",
+                "value": "23"
+            },
+            {
+                "name": “humidity”,
+                "type": "mmHg",
+                "value": "720"
+            },
+           {
+                "name": “air_quality”,
+                "type": "mmHg",
+                "value": "720"
+            }
+            ]
+        }
+    ],
+    "updateAction": "APPEND"
+}

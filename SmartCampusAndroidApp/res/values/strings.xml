@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmartCampusUSP Settings</string>
+    <string name="service_name">SmartCampusUSP Service</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="msg">Informacoes de Temperatura/Umidade</string>
+    <string name="txtBlue">BlueToothDevices</string>
+
+</resources>

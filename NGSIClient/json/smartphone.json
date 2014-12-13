@@ -1,0 +1,179 @@
+{
+  "contextElements": [
+    {
+      "id": "1",
+      "type": "arduino",
+      "attributes": [
+        {
+          "value": "1",
+          "type": "celsius",
+          "name": "temperature"
+        },
+        {
+          "value": "1",
+          "type": "ppm",
+          "name": "gLP Level"
+        },
+        {
+          "value": "1",
+          "type": "ppm",
+          "name": "smoke level"
+        },
+        {
+          "value": "1",
+          "type": "ppm",
+          "name": "carbon dioxide level"
+        },
+        {
+          "value": "1",
+          "type": "custom",
+          "name": "air quality"
+        },
+        {
+          "value": "1",
+          "type": "Pa",
+          "name": "atmospheric pressure"
+        },
+        {
+          "value": "1",
+          "type": "meter",
+          "name": "altitude"
+        },
+        {
+          "value": "1",
+          "type": "custom",
+          "name": "rain"
+        }
+      ],
+      "isPattern": "false"
+    },
+    {
+      "id": "353317053271525",
+      "type": "smartphone",
+      "attributes": [
+        {
+          "value": 56.96,
+          "type": "db",
+          "name": "audio level"
+        },
+        {
+          "value": 0,
+          "type": "meters",
+          "name": "altitude"
+        },
+        {
+          "value": "-0.8523358,5.2385135,7.795521",
+          "type": "custom",
+          "name": "TYPE_PROXIMITY"
+        },
+        {
+          "value": "290.17062,-40.922596,-6.7467966",
+          "type": "custom",
+          "name": "TYPE_ACCELEROMETER"
+        },
+        {
+          "value": "-0.08032878,-0.028710667,0.0070249503",
+          "type": "custom",
+          "name": "TYPE_MAGNETIC_FIELD"
+        },
+        {
+          "value": "-1.0151415,6.129156,7.431602",
+          "type": "custom",
+          "name": "TYPE_PRESSURE"
+        },
+        {
+          "value": "-1.0821792,6.167464,7.3071036",
+          "type": "custom",
+          "name": "TYPE_GRAVITY"
+        },
+        {
+          "value": "19.38,1.9799999,2.7",
+          "type": "custom",
+          "name": "TYPE_LINEAR_ACCELERATION"
+        },
+        {
+          "value": "-0.034513887,0.016187929,0.007330383",
+          "type": "custom",
+          "name": "TYPE_MAGNETIC_FIELD"
+        },
+        {
+          "value": "-1.043872,6.1004257,7.2592196",
+          "type": "custom",
+          "name": "TYPE_ROTATION_VECTOR"
+        },
+        {
+          "value": "-0.0030543262,-0.0076358155,0.0036651916",
+          "type": "custom",
+          "name": "TYPE_MAGNETIC_FIELD"
+        },
+        {
+          "value": "-1.1204864,6.157887,7.28795",
+          "type": "custom",
+          "name": "TYPE_ROTATION_VECTOR"
+        },
+        {
+          "value": "-1.2449849,6.2728086,7.144298",
+          "type": "custom",
+          "name": "TYPE_PRESSURE"
+        },
+        {
+          "value": "-0.8714894,6.1866174,7.0964136",
+          "type": "custom",
+          "name": "TYPE_LIGHT"
+        },
+        {
+          "value": "19.08,1.26,3.0",
+          "type": "custom",
+          "name": "TYPE_LINEAR_ACCELERATION"
+        },
+        {
+          "value": "19.08,1.3199999,3.06",
+          "type": "custom",
+          "name": "TYPE_ORIENTATION"
+        },
+        {
+          "value": "18.9,0.9,2.7",
+          "type": "custom",
+          "name": "TYPE_LINEAR_ACCELERATION"
+        },
+        {
+          "value": "-1.0534488,6.167464,7.201759",
+          "type": "custom",
+          "name": "TYPE_ROTATION_VECTOR"
+        },
+        {
+          "value": "-1.0726024,6.215348,7.2113357",
+          "type": "custom",
+          "name": "TYPE_ROTATION_VECTOR"
+        },
+        {
+          "value": "-1.0247183,6.129156,7.2592196",
+          "type": "custom",
+          "name": "TYPE_ROTATION_VECTOR"
+        },
+        {
+          "value": "-1.2354081,6.2823853,7.297527",
+          "type": "custom",
+          "name": "TYPE_PRESSURE"
+        },
+        {
+          "value": "-0.1160644,0.059253927,-0.012217305",
+          "type": "custom",
+          "name": "TYPE_GYROSCOPE"
+        },
+        {
+          "value": "-1.1875241,5.9567738,7.4603324",
+          "type": "custom",
+          "name": "TYPE_GAME_ROTATION_VECTOR"
+        },
+        {
+          "value": "-0.90021986,6.14831,7.3071036",
+          "type": "custom",
+          "name": "TYPE_LIGHT"
+        }
+      ],
+      "isPattern": "false"
+    }
+  ],
+  "updateAction": "APPEND"
+}

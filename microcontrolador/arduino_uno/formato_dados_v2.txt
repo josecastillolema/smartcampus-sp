@@ -1,0 +1,19 @@
+
+Formato dos dados: umidade, temperatura, concentração GLP,concentração Fumaça,concetração CO, qualidade de ar, pressão atmosférica, altitude,chuva
+
+
+1)umidade relativa do ar em porcentagem
+2)temperatura em graus Celsius
+3*) concentração GLP em ppm
+4*) concentração Fumaça em ppm
+5*) concentração CO em ppm
+6)Verifica a Qualidade do ar de 3 a 0, segundo a biblioteca do sensor:
+
+0 -> High pollution! Force signal active.
+1 -> High pollution
+2 -> Low pollution
+3 -> Air fresh
+
+7) pressão atmosférica em Pa (Pascal)
+8) Altitude em metros
+9) Verifica se está chovendo 1 para sim e 0 para não

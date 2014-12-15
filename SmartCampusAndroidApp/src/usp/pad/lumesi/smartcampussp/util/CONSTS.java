@@ -45,10 +45,12 @@ public interface CONSTS {
 	// Audio Constants
 	public interface AUDIO{
 		public static final int FREQUENCY = 44100;
+		//public static final int FREQUENCY = 16000;
 		public static final int CHANNEL = AudioFormat.CHANNEL_IN_MONO;
 		public static final int ENCODING = AudioFormat.ENCODING_PCM_16BIT;
 		public static final double P0 = 0.000002;	
-		public static final int CALIB_DEFAULT = -112;
+		public static final double P1 = 0.000002;	
+		public static final int CALIB_DEFAULT = -80;
 		public static final String SLOW_MODE = "SLOW";
 		public static final String FAST_MODE = "FAST";
 		public static final double EMA_FILTER = 0.6;

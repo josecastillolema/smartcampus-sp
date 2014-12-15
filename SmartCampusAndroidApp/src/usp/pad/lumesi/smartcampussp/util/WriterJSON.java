@@ -23,14 +23,14 @@ public class WriterJSON {
 	private Timer timer;
 	private int time;
 	private ArduinoReader ardR;
-	private AudioLevelReader alR;
+	private AudioLevelReader2 alR;
 	private GeoLocReader glR;
 	private SensorsReader sR;
 	//private JSONObject jsob;
 	Context ctx;
 	
 	public WriterJSON(int time, ArduinoReader ardR, 
-			AudioLevelReader alR, GeoLocReader glR, SensorsReader sR, Context ctx){
+			AudioLevelReader2 alR, GeoLocReader glR, SensorsReader sR, Context ctx){
 		this.time = time;
 		this.ardR = ardR;
 		this.alR = alR;
@@ -129,8 +129,8 @@ public class WriterJSON {
 			}
 			
 			private HttpResponse sendMessage(JSONObject jo) throws ClientProtocolException, IOException{
-	//			Log.d(CONSTS.TAG, "Message sent:");
-	//			Log.d(CONSTS.TAG, jo.toString());
+				Log.d(CONSTS.TAG, "Message sent:");
+				Log.d(CONSTS.TAG, jo.toString());
 				DefaultHttpClient client = new DefaultHttpClient();
 				HttpPost post = new HttpPost(CONSTS.SERVER.FIWARE_SERVER);
 				StringEntity se = new StringEntity(jo.toString());

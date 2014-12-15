@@ -42,6 +42,7 @@ public class SmartCampusSpAct extends ActionBarActivity {
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		// TODO Auto-generated method stub
+		
 		super.onSaveInstanceState(outState);
 		outState.putSerializable(Settings.TIME.name(), edtTime.toString());
 		outState.putSerializable(Settings.ENABLE_EXTERNAL_SENSORS.name(), chkES.isChecked());
@@ -50,7 +51,7 @@ public class SmartCampusSpAct extends ActionBarActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-
+		
 
 		//default init calls
 		super.onCreate(savedInstanceState);

@@ -12,7 +12,7 @@ import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.util.Log;
 
-public class AudioLevelReader implements IReader {
+public class AudioLevelReader2 implements IReader {
 	private Timer timer;
 	private int BUFFSIZE = 0;
 	private int mCaliberationValue = CONSTS.AUDIO.CALIB_DEFAULT;
@@ -23,7 +23,7 @@ public class AudioLevelReader implements IReader {
 	AudioRecord mRecordInstance = null;
 	AudioLevelTask alt;
 	
-	public AudioLevelReader(int time, String mode) {
+	public AudioLevelReader2(int time, String mode) {
 		alt = new AudioLevelTask();
 		timer = new Timer();
 		setMode(mode);
@@ -36,6 +36,7 @@ public class AudioLevelReader implements IReader {
 				MediaRecorder.AudioSource.MIC,
 				CONSTS.AUDIO.FREQUENCY, CONSTS.AUDIO.CHANNEL, 
 				CONSTS.AUDIO.ENCODING, BUFFSIZE*2);
+//		Log.d(CONSTS.TAG, "AUDIO BLOCK SIZE *******: " + BUFFSIZE);
 		
 	}
 	
@@ -101,25 +102,20 @@ public class AudioLevelReader implements IReader {
 				if (mRecordInstance == null)
 					createRecordInstance();
 				mRecordInstance.startRecording();
-				double splValue = 0.0;
-				double rmsValue = 0.0;
-				int laco = (int) (Math.random() * 99) + 1;
-				for (int j = 0; j < 10; j++) {
-					int SIZE = BUFFSIZE;
-					short[] tempBuffer = new short[SIZE];
-					mRecordInstance.read(tempBuffer, 0, SIZE);
-					for (int i = 0; i < SIZE - 1; i++) {
-						rmsValue += tempBuffer[i] * tempBuffer[i];
-					}
-					rmsValue = rmsValue / SIZE;
-					rmsValue = Math.sqrt(rmsValue);
-					splValue = 20 * Math.log10(rmsValue / CONSTS.AUDIO.P0);
-					splValue = splValue + mCaliberationValue;
-					//splValue = round(splValue, 2);
-					if (mMaxValue < splValue) {
-						mMaxValue = splValue;
+				double splValue = Short.MIN_VALUE;
+				int SIZE = BUFFSIZE;
+				short[] tempBuffer = new short[SIZE];
+				mRecordInstance.read(tempBuffer, 0, SIZE);
+				Log.d(CONSTS.TAG, splValue + "****SOUND LEVEL INIT");
+				for (int i = 0; i < tempBuffer.length; i++) {
+					if (tempBuffer[i] > splValue){
+						splValue = tempBuffer[i];
 					}
 				}
+				if (splValue == 0.0)
+						splValue = 1; 
+				Log.d(CONSTS.TAG, splValue + "****SOUND LEVEL END");
+				splValue = 20 * Math.log10(splValue / Short.MAX_VALUE) - mCaliberationValue;
 				dbValue = splValue;
 			} catch (Exception e) {
 				e.printStackTrace();

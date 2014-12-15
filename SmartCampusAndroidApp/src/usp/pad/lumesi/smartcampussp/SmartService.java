@@ -22,6 +22,7 @@ public class SmartService extends Service {
 	
 	@Override
 	public void onCreate() {
+		
 	    // Create an Intent that will open the main Activity
 	    // if the notification is clicked.
 		int NOTIFICATION_ID = 1;

@@ -19,7 +19,7 @@ In the first iteration of the prototype, the system will only manage one magnitu
 
 ## NGSI Clients
 
-All the heterogeneus sensor reading is sended to the Context Broker using the [NGSI Protocol](http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/OMA_NGSI_10).
+All the heterogeneus sensor reading is send to the Context Broker using the [NGSI Protocol](http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/OMA_NGSI_10).
 
 #### Developing the NGSI Client
 

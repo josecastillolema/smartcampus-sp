@@ -2,12 +2,12 @@ Smart Campus SP
 ===============
 
 # Overview
-SmartCampus is a [FI-Ware](http://edu.fi-ware.eu/course/index.php) software prototype to measure the contamination levels in the USP (Universidade de São Paulo) Campus with a group of Arduino and Galileo sensors. It can be accessed at http://130.206.126.46/admin/smartcampus-usp. Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed.
+SmartCampus is a [FI-Ware](http://edu.fi-ware.eu/course/index.php) software prototype to measure the contamination levels in the USP (Universidade de São Paulo) Campus with a group of Arduino and Galileo sensors. Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed.
 
 ![FI-Beer overview](img/overview.png)
 
 SmartCampus makes use of several FI-Ware building blocks, all of them deployed in the FI-Lab testbed:
-* [Context Broker](http://catalogue.fi-ware.eu/enablers/publishsubscribe-context-broker-orion-context-broker): a data concentrator for all the measures, manages subscriptions and data access. Needs some scripting in order to integrate it with Cosmos (NGSI2Cosmos script that can be found on the [FI-Ware Live Demo App](https://github.com/telefonicaid/fiware-livedemoapp) ).  
+* [Context Broker](http://catalogue.fi-ware.eu/enablers/publishsubscribe-context-broker-orion-context-broker): a data concentrator for all the measures, manages subscriptions and data access. Needs some configuring in order to integrate it with Cosmos through the Cygnus plugin.  
 * [Wirecloud](http://catalogue.fi-ware.eu/enablers/application-mashup-wirecloud): Front End based on HTML5+JS widget composing, offers some libraries to integrate with the CB. 
 * [Cosmos](http://catalogue.fi-ware.eu/enablers/bigdata-analysis-cosmos): Big Data platform to store and analyze measure data.
 
@@ -17,9 +17,9 @@ SmartCampus makes use of several FI-Ware building blocks, all of them deployed i
 
 In the first iteration of the prototype, the system will only manage one magnitude of the polution metrics: temperature, pressure, noise and air particles.
 
-## Linux and NGSI Client
+## NGSI Clients
 
-All the sensor reading is done in a Python script that reads the sensor data from the Arduino and Galileo sensors and sends it to the Context Broker using the [NGSI Protocol](http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/OMA_NGSI_10).
+All the heterogeneus sensor reading is sended to the Context Broker using the [NGSI Protocol](http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/OMA_NGSI_10).
 
 #### Developing the NGSI Client
 
@@ -47,7 +47,7 @@ For the prototype, we used a dedicated cloud instance in [FI-Lab](http://lab.fi-
 ## Wirecloud Management Widget
 The Front End of the system was designed as a series of widgets deployed in FI-Ware's Mashup Platform: [Wirecloud](http://conwet.fi.upm.es/wirecloud/). The widgets were deployed in the FI-Lab's marketplace and composed in a new workspace.
 
-Two widgets were deployed:
+Three widgets were deployed:
 * NGSI Updater
 * Map viewer: that consumes data from the Context Broker, showing a map of the campus with realtime information on the temperature, signaling what parts are too cool or too warm.
 * Linear graph: Works as a historical data widget, depicting the evolution of the temperature over the last minutes.
@@ -58,8 +58,4 @@ Two widgets were deployed:
 
 ## Connection to Cosmos (HDFS and Hive)
 
-In order to consume the historical data from the widgets, it has to be first stored somewhere. FI-Ware sensor data is stored in the HDFS system of its Big Data GE: [Cosmos](http://catalogue.fi-ware.eu/enablers/bigdata-analysis-cosmos). The data is stored in Cosmos through the use of a script in the Context Broker machine, that is subscribed to the measure update.
-
-## Connection to CKAN
-
-OpenData ...
+In order to consume the historical data from the widgets, it has to be first stored somewhere. FI-Ware sensor data is stored in the HDFS system of its Big Data GE: [Cosmos](http://catalogue.fi-ware.eu/enablers/bigdata-analysis-cosmos). The data is stored in Cosmos through the use of a script in the Context Broker machine (Cygnus), that is subscribed to the measure update.

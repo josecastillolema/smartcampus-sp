@@ -2,7 +2,7 @@ Smart Campus SP
 ===============
 
 # Overview
-SmartCampus is a [FI-Ware](http://edu.fi-ware.eu/course/index.php) software prototype to measure the contamination levels in the USP (Universidade de São Paulo) Campus with a group of Android, Arduino and Galileo sensors. Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed.
+SmartCampus is a [FI-Ware](https://www.fiware.org/) software prototype to measure the contamination levels in the USP (Universidade de São Paulo) Campus with a group of Android, Arduino and Galileo sensors. Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed.
 
 ![FI-Beer overview](img/overview.png)
 

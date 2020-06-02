@@ -4,7 +4,7 @@ Smart Campus SP
 # Overview
 SmartCampus is a [FI-Ware](https://www.fiware.org/) software prototype to measure the contamination levels in the [University of São Paulo (USP)](https://www5.usp.br/) Campus with a group of Android, Arduino and Galileo sensors. Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed.
 
-![FI-Beer overview](img/overview.png)
+![FI-Beer overview](/img/overview.png)
 
 SmartCampus makes use of several FI-Ware building blocks, all of them deployed in the FI-Lab testbed:
 * [Context Broker](http://catalogue.fi-ware.eu/enablers/publishsubscribe-context-broker-orion-context-broker): a data concentrator for all the measures, manages subscriptions and data access. Needs some configuring in order to integrate it with Cosmos through the Cygnus plugin.  
@@ -52,9 +52,9 @@ Three widgets were deployed:
 * Map viewer: that consumes data from the Context Broker, showing a map of the campus with realtime information on the temperature, signaling what parts are too cool or too warm.
 * Linear graph: Works as a historical data widget, depicting the evolution of the temperature over the last minutes.
 
-![WireCloud overview](img/wirecloud1.png)
+![WireCloud overview](/img/wirecloud1.png)
 
-![Wiring overview](img/wirecloud2.png)
+![Wiring overview](/img/wirecloud2.png)
 
 ## Connection to Cosmos (HDFS and Hive)
 
@@ -64,4 +64,4 @@ In order to consume the historical data from the widgets, it has to be first sto
 
 The Android client was developed in Java. The [Jersey API](https://jersey.java.net/) was used for REST and JSON-related tasks.
 
-![Android client](img/android.png)
+![Android client](/img/android.png)

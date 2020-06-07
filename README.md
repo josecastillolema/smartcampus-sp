@@ -21,7 +21,7 @@ In the first iteration of the prototype, the system will only manage one magnitu
 
 All the heterogeneus sensor reading is send to the Context Broker using the [NGSI Protocol](http://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/OMA_NGSI_10).
 
-#### Developing the NGSI Client
+### Developing the NGSI Client
 
 The Context Broker, where the measures will be aggregated and distributed, listens for requests following the [NGSI protocol](http://technical.openmobilealliance.org/Technical/release_program/NGSI_v1_0.aspx). In order to communicate with this component, two NGSI clients were developed (python and java). The NGSI protocol defines several resources and operations, but the client only use a very restricted set:
 
@@ -30,11 +30,11 @@ The Context Broker, where the measures will be aggregated and distributed, liste
 
 The NGSI protocol is a REST protocol that accepts both XML and JSON payloads. JSON was prefered for this project.
 
-##### Python version
+#### Python version
 
 Intented to be used with Arduino and Galileo sensors. All the communications were stablished using the `requests` HTTP library with JSON payloads (the default `json` python library).
 
-##### Java version
+#### Java version
 
 Intended to be used with Android OS. For the Java version, the [Jersey API](https://jersey.java.net/) was used.
 

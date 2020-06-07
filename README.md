@@ -8,7 +8,7 @@ SmartCampus is a [FI-Ware](https://www.fiware.org/) software prototype to measur
 
 SmartCampus makes use of several FI-Ware building blocks, all of them deployed in the FI-Lab testbed:
 * [Context Broker](https://fiware-orion.readthedocs.io/): a data concentrator for all the measures, manages subscriptions and data access. Needs some configuring in order to integrate it with Cosmos through the Cygnus plugin.  
-* [Wirecloud](http://catalogue.fi-ware.eu/enablers/application-mashup-wirecloud): Front End based on HTML5+JS widget composing, offers some libraries to integrate with the CB. 
+* [Wirecloud](https://wirecloud.readthedocs.io/): Front End based on HTML5+JS widget composing, offers some libraries to integrate with the CB. 
 * [Cosmos](http://catalogue.fi-ware.eu/enablers/bigdata-analysis-cosmos): Big Data platform to store and analyze measure data.
 
 # Detailed description

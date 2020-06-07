@@ -42,7 +42,7 @@ Intended to be used with Android OS. For the Java version, the [Jersey API](http
 
 The [Orion Context Broker](https://fiware-orion.readthedocs.io/) was used as the central data node of the system. All the data of the sensors is sent to Orion who, in turn, send it to all its suscribers and can be queried from the frontend systems to get up-to-date information of any of the measures.
 
-For the prototype, we used a dedicated cloud instance in [FI-Lab](http://lab.fi-ware.eu/), that has a preinstalled Context Broker service (the image name is `orion-psb-image-R3.2`). It should start listening on port 1026. Remember to open this port in the Security Group.
+For the prototype, we used a dedicated cloud instance in [FI-Lab](https://cloud.lab.fiware.org/), that has a preinstalled Context Broker service (the image name is `orion-psb-image-R3.2`). It should start listening on port 1026. Remember to open this port in the Security Group.
 
 ## Wirecloud Management Widget
 The Front End of the system was designed as a series of widgets deployed in FI-Ware's Mashup Platform: [Wirecloud](https://wirecloud.readthedocs.io/). The widgets were deployed in the FI-Lab's marketplace and composed in a new workspace.

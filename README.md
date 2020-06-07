@@ -45,7 +45,7 @@ The [Orion Context Broker](https://forge.fi-ware.eu/plugins/mediawiki/wiki/fiwar
 For the prototype, we used a dedicated cloud instance in [FI-Lab](http://lab.fi-ware.eu/), that has a preinstalled Context Broker service (the image name is `orion-psb-image-R3.2`). It should start listening on port 1026. Remember to open this port in the Security Group.
 
 ## Wirecloud Management Widget
-The Front End of the system was designed as a series of widgets deployed in FI-Ware's Mashup Platform: [Wirecloud](http://conwet.fi.upm.es/wirecloud/). The widgets were deployed in the FI-Lab's marketplace and composed in a new workspace.
+The Front End of the system was designed as a series of widgets deployed in FI-Ware's Mashup Platform: [Wirecloud](https://wirecloud.readthedocs.io/). The widgets were deployed in the FI-Lab's marketplace and composed in a new workspace.
 
 Three widgets were deployed:
 * NGSI Updater

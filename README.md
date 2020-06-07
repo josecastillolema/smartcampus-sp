@@ -40,7 +40,7 @@ Intended to be used with Android OS. For the Java version, the [Jersey API](http
 
 ## The Context Broker
 
-The [Orion Context Broker](https://forge.fi-ware.eu/plugins/mediawiki/wiki/fiware/index.php/Publish/Subscribe_Broker_-_Orion_Context_Broker_-_User_and_Programmers_Guide#Query_Context_operation) was used as the central data node of the system. All the data of the sensors is sent to Orion who, in turn, send it to all its suscribers and can be queried from the frontend systems to get up-to-date information of any of the measures.
+The [Orion Context Broker](https://fiware-orion.readthedocs.io/) was used as the central data node of the system. All the data of the sensors is sent to Orion who, in turn, send it to all its suscribers and can be queried from the frontend systems to get up-to-date information of any of the measures.
 
 For the prototype, we used a dedicated cloud instance in [FI-Lab](http://lab.fi-ware.eu/), that has a preinstalled Context Broker service (the image name is `orion-psb-image-R3.2`). It should start listening on port 1026. Remember to open this port in the Security Group.
 
@@ -58,7 +58,7 @@ Three widgets were deployed:
 
 ## Connection to Cosmos (HDFS and Hive)
 
-In order to consume the historical data from the widgets, it has to be first stored somewhere. FI-Ware sensor data is stored in the HDFS system of its Big Data GE: [Cosmos](http://catalogue.fi-ware.eu/enablers/bigdata-analysis-cosmos). The data is stored in Cosmos through the use of a script in the Context Broker machine (Cygnus), that is subscribed to the measure update.
+In order to consume the historical data from the widgets, it has to be first stored somewhere. FI-Ware sensor data is stored in the HDFS system of its Big Data GE: [Cosmos](https://fiware-cosmos.readthedocs.io/). The data is stored in Cosmos through the use of a script in the Context Broker machine (Cygnus), that is subscribed to the measure update.
 
 ## Android client
 

@@ -1,3 +1,7 @@
+![GitHub](https://img.shields.io/github/license/josecastillolema/smartcampus-sp)
+![GitHub language count](https://img.shields.io/github/languages/count/josecastillolema/smartcampus-sp)
+![GitHub top language](https://img.shields.io/github/languages/top/josecastillolema/smartcampus-sp)
+
 # Smart Campus SP
 
 SmartCampus is a [FI-Ware](https://www.fiware.org/) software prototype to measure the contamination levels in the [University of São Paulo (USP)](https://www5.usp.br/) Campus with a group of Android, Arduino and Galileo sensors. Below you can find a diagram of all the system components and a brief explanation of their functions. The following sections will detail how the components were connected and all the software and hardware installed.

@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/josecastillolema/smartcampus-sp)
 ![GitHub language count](https://img.shields.io/github/languages/count/josecastillolema/smartcampus-sp)
 ![GitHub top language](https://img.shields.io/github/languages/top/josecastillolema/smartcampus-sp)
-[![Requirements Status](https://requires.io/github/josecastillolema/smartcampus-sp/requirements.svg?branch=master)](https://requires.io/github/josecastillolema/smartcampus-sp/requirements/?branch=master)
+
 
 
 # Smart Campus SP
